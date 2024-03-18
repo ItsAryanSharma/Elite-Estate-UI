@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel:wght@400..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cinzel:wght@400..900&family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Background Color */
+  --primary-color: #f78888;
+  --secondary-color: #f3d250;
+  --third-color: #ececec;
+  --forth-color: #90ccf4;
+  --fifth-color: #5da2d5;
+  --dark: #000;
+  --white: #fff;
+
+  /* Text Style */
+  --primary-font: "Cinzel", serif;
+  --secondary-font: "Amatic SC", sans-serif;
+  --third-font: "Merriweather Sans", sans-serif;
+}
+
+body {
+  background-color: var(--primary-color);
+}
+
+.wrappeer {
+  padding-top: 12rem;
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+  width: 0.7rem;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--primary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--forth-color);
+  border-radius: 10px;
+}
+
+/* header */
+.header_wrapper {
+  background-color: var(--primary-color);
+  position: fixed;
+  border-bottom: var(--secondary-color) solid 7px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header_wrapper .nav-item .nav-link {
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  display: inline-block;
+  margin: 0 7px;
+}
+
+.header_wrapper .nav-item .nav-link:hover {
+  border-bottom: var(--dark) solid 3px;
+}
+
+/* banner */
+.top-banner .text {
+  margin-top: 120px;
+  margin-left: 120px;
+}
+
+.top-banner .text h1 {
+  font-family: var(--secondary-font);
+  font-size: 3.4rem;
+  font-weight: bolder;
+  color: var(--third-color);
+}
+
+.top-banner .banner-img {
+  /* margin: 0;
+  padding: 0; */
+  width: 101.5%;
+  height: 450px; /* Set a height for the banner image */
+  background-image: url(Images/banner1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.top-banner .banner-text h1 {
+  margin-left: 120px;
+  font-family: var(--secondary-font);
+  font-size: 3.4rem;
+  font-weight: bolder;
+  color: var(--dark);
+}
+
+/* about us */
+.about {
+  margin-left: 100px;
+}
+
+.about p {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.about h1 {
+  margin-bottom: 22px;
+  font-family: var(--third-font);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  border-bottom: var(--fifth-color) solid 3px;
+}
+
+.about .counter {
+  margin-top: 50px;
+  justify-content: space-evenly;
+  color: var(--dark);
+  margin-bottom: 20px;
+  padding: 22px;
+}
+
+/* why us */
+.why .images {
+  position: relative;
+  z-index: -1;
+  margin-top: 52px;
+}
+
+.why .text-content {
+  position: absolute;
+  top: 223%; /* Positions the top of the text content 50% from the top of the container */
+  left: 30%; /* Positions the left of the text content 50% from the left of the container */
+  transform: translate(-50%, -50%);
+}
+
+.why .text-content h1 {
+  margin-bottom: 22px;
+  font-family: var(--third-font);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  border-bottom: var(--fifth-color) solid 3px;
+}
+
+.why .text-content p {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  font-weight: 900;
+  color: var(--dark);
+}
+
+/* expect */
+.containeerr {
+  position: relative;
+  /* width: 430px; */
+}
+
+.home {
+  background-image: url(Images/home.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 220px;
+  width: 100%;
+  /* Take full width of container */
+  position: relative;
+  z-index: 1;
+}
+
+.homee {
+  background-image: url(Images/home1.png);
+  /* Path to your background image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 220px;
+  width: 100%;
+  /* Take full width of container */
+  position: relative;
+  z-index: 1;
+}
+
+.homeee {
+  background-image: url(Images/home2.png);
+  /* Path to your background image */
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 220px;
+  width: 100%;
+  /* Take full width of container */
+  position: relative;
+  z-index: 1;
+}
+
+.triangle-right,
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-top: 0 solid transparent;
+  position: absolute;
+  z-index: 2;
+}
+
+.triangle-right {
+  border-left: 80px solid var(--primary-color);
+  border-bottom: 80px solid transparent;
+  top: 0;
+  left: 0;
+}
+
+.triangle-left {
+  border-right: 80px solid var(--primary-color);
+  border-bottom: 80px solid transparent;
+  top: 0;
+  right: 0;
+  left: 80px;
+}
+
+.trapezoid {
+  border-bottom: 80px solid var(--primary-color);
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  height: 0;
+  width: 180px;
+  transform: rotate(90deg);
+  position: relative;
+  z-index: 3;
+  margin-top: -180px;
+  left: -90px;
+}
+
+.trapezoid_2 {
+  border-bottom: 80px solid var(--primary-color);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 100px;
+  transform: rotate(270deg);
+  position: relative;
+  z-index: 1;
+  margin-top: -100px;
+  right: -110px;
+}
+
+.expected,
+.expectedd {
+  justify-content: space-evenly;
+}
+
+.expected .col-3 {
+  border-left: var(--secondary-color) solid 7px;
+  border-right: var(--secondary-color) solid 7px;
+  border-top: var(--secondary-color) solid 7px;
+  height: 270px;
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+.expect h1 {
+  margin-bottom: 34px;
+  font-family: var(--third-font);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--dark);
+  border-bottom: var(--fifth-color) solid 3px;
+  width: 70%;
+}
+
+.expectedd .col-3 {
+  border-left: var(--secondary-color) solid 7px;
+  border-right: var(--secondary-color) solid 7px;
+  border-bottom: var(--secondary-color) solid 7px;
+  height: 80px;
+}
+
+.expect p {
+  margin-bottom: 34px;
+  font-family: var(--primary-font);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+/* break */
+.break .banner-img {
+  width: 100.5%;
+  height: 550px; /* Set a height for the banner image */
+  background-image: url(Images/break.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 440px;
+  padding-left: 430px;
+}
+
+.break h1 {
+  font-family: var(--primary-font);
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+/* team */
+.team p {
+  font-family: var(--third-font);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.team h1 {
+  font-family: var(--primary-font);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: var(--fifth-color) solid 3px;
+  width: 60%;
+  margin-bottom: 22px;
+}
+
+.team img {
+  height: 430px;
+}
+
+.team h2 {
+  font-family: var(--third-font);
+  font-size: 2rem;
+  font-weight: 200;
+  color: var(--dark);
+}
+
+.team h3 {
+  font-family: var(--primary-font);
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--dark);
+  padding-bottom: 12px;
+  border-bottom: var(--secondary-color) solid 3.4px;
+}
+
+/* contact us */
+.contact h1 {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+  border-bottom: var(--fifth-color) solid 3px;
+  width: 60%;
+  margin-bottom: 22px;
+}
+
+.contact label {
+  font-family: var(--secondary-font);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.contact img {
+  margin-top: 52px;
+  margin-left: 22px;
+  border-top-left-radius: 34%;
+  border-bottom-right-radius: 34%;
+  border-top-right-radius: 7%;
+  border-bottom-left-radius: 7%;
+}
+
+/* footer */
+.footer {
+  border-top: var(--secondary-color) solid 7px;
+  padding: 34px;
+}
+
+.footer a {
+  margin: 0 34px;
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--dark);
+}
+
+.footer p {
+  font-family: var(--secondary-font);
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
